@@ -15,11 +15,23 @@ func checkin(ltuid, ltoken string, wg *sync.WaitGroup) {
 	starrailActID := "e202303301540311"
 	starrailEndpoint := "https://sg-public-api.hoyolab.com/event/luna/os"
 
+	zzzActID := "e202406031448091"
+	zzzEndpoint := "https://sg-public-api.hoyolab.com/event/luna/zzz/os"
+
 	cookie := "ltuid=" + ltuid + "; ltoken=" + ltoken
 
-	signJson := sign(genshinEndpoint, genshinActID, cookie)
+	signJson := sign(genshinEndpoint, genshinActID, cookie, nil)
 	fmt.Println(signJson)
-	signJson = sign(starrailEndpoint, starrailActID, cookie)
+	signJson = sign(starrailEndpoint, starrailActID, cookie, nil)
+	fmt.Println(signJson)
+	signJson = sign(
+		zzzEndpoint,
+		zzzActID,
+		cookie,
+		map[string]string{
+			"x-rpc-signgame": "zzz",
+		},
+	)
 	fmt.Println(signJson)
 }
 
