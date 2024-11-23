@@ -1,7 +1,10 @@
 # HOYOLab
 
 ## 簡介
-- 用於 Genshin Impact 以及 Honkai: Star Rail 的腳本
+- 用於 Hoyolab 的腳本，目前支援
+    - 原神 Genshin Impact
+    - 崩壞星穹鐵道 Honkai: Star Rail
+    - 絕區零 Zenless Zone Zero
 
 ## 功能
 - [x] 每日簽到
