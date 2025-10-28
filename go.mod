@@ -1,8 +1,17 @@
 module hoyolab
 
-go 1.20
+go 1.24.0
 
 require (
-	github.com/Adam7066/golang v0.0.0-20230306032425-bb3e81d0b621
-	github.com/goccy/go-json v0.10.2
+	github.com/dghubble/sling v1.4.2
+	gorm.io/driver/sqlite v1.6.0
+	gorm.io/gorm v1.31.0
+)
+
+require (
+	github.com/google/go-querystring v1.1.0 // indirect
+	github.com/jinzhu/inflection v1.0.0 // indirect
+	github.com/jinzhu/now v1.1.5 // indirect
+	github.com/mattn/go-sqlite3 v1.14.32 // indirect
+	golang.org/x/text v0.30.0 // indirect
 )
