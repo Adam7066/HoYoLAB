@@ -1,7 +1,7 @@
-# HOYOLab
+# HoYoLAB
 
 ## 簡介
-- 用於 Hoyolab 的腳本，目前支援
+- 用於 HoYoLAB 的腳本，目前支援
     - 原神 Genshin Impact
     - 崩壞星穹鐵道 Honkai: Star Rail
     - 絕區零 Zenless Zone Zero
@@ -11,18 +11,15 @@
 - [ ] 兌換碼
 
 ## 使用方法
-- 在根目錄建立一個 `persons.json` 檔案，內容如下：
-    ```json
-    [
-        {
-            "name": "",
-            "ltuid": "",
-            "ltoken": ""
-        }
-    ]
-    ```
-- `name` 用於區別多個玩家的帳號
-- `ltuid`, `ltoken` 請前往簽到網站，登入後開啟開發者工具，到控制台輸入以下指令，來取得 cookie。
-    ```javascript
-    document.cookie
-    ```
+1. 互動式新增帳號：`go run main.go --add`
+    - 依照提示輸入 Name、LtmidV2、LtuidV2、LtokenV2 及遊戲選擇。
+2. 執行每日簽到：`go run main.go`
+    - 已簽到過的帳號當天不會重複簽到。
+
+> [!TIP]
+> 可以搭配使用 crontab 定時執行每日簽到。
+
+### Cookie 取得方式
+- 登入 HoYoLAB 簽到網站，開啟瀏覽器開發者工具，於 Cookie 中：
+- 取得 ltmid_v2、ltuid_v2、ltoken_v2 對應填入。
+- Name 欄位僅用於辨識帳號。
